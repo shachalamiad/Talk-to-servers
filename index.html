@@ -29,15 +29,21 @@
 
     <section class="res-container-3 hidden">
         <h1>World cup</h1>
-        <input type="text" 
-            placeholder="Start typing your team name" 
-            oninput="onTeamSearch(this.value)" />
+        <input type="text" placeholder="Start typing your team name" oninput="onTeamSearch(this.value)" />
         <ul class="team-list">
-        <h2 class="team-data"></h2>
+            <h2 class="team-data"></h2>
         </ul>
         <div class="country-games"></div>
     </section>
 
+    <section class="res-container-4 hidden">
+        <h1>Chests</h1>
+        <button onclick="askChests()">Ask Chests</button>
+        <ul class="chests-list">
+            <!-- <h2 class="chest-data"></h2> -->
+        </ul>
+        <div class="chests-games"></div>
+    </section>
 
     <script src="lib/jquery.js"></script>
     <script src="js/service.js"></script>

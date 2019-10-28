@@ -34,3 +34,7 @@ h2 {
     background-color: teal;
     padding: 2px;
 }
+
+.chests-list {
+    list-style: none;
+}

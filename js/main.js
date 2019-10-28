@@ -85,8 +85,8 @@ function onSelectTeam(el) {
     getTeamGames(renderTeamGames, selectedFifaCode);
 }
 
-function renderTeamGames (data) {
-console.log(data)
+function renderTeamGames(data) {
+    console.log(data)
     const strHTMLs = data.map(game =>
         `<li>
         Game venue: ${game.venue} <br>
@@ -99,10 +99,27 @@ console.log(data)
     document.querySelector('.country-games').innerHTML = strHTMLs.join('');
 }
 
-// Last name: ${person.lname} <br>
-        // Tel: ${person.tel}  <br>
-        // Address: ${person.address} <br>
-        // City: ${person.city} <br>
-        // State: ${person.state} <br>
-        // Zip code: ${person.zip} <br>
-        
+
+// 4.	clash-royal.html API 
+
+
+function askChests() {
+    getChects(renderChests);
+}
+
+
+function renderChests(chests) {
+    var chestStr;
+
+    const strHTMLs = chests.map((chest) => {
+        chestStr = chest.idName.replace(/-\d+/g,'')
+        chestStr = chestStr.replace(/'/g, '')
+        return `<li>
+        Chest name: ${chest.name} <br>
+        Chest cost: ${chest.gemCost} <br>
+        <img src="http://www.clashapi.xyz/images/chests/${chestStr}.png">
+        </li>`
+
+    })
+    document.querySelector('.chests-list').innerHTML = strHTMLs.join('');
+}
