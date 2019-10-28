@@ -1,0 +1,36 @@
+
+
+/* .hidden{
+    display:none;
+} */
+
+.address-book {
+    list-style: none;
+}
+
+li {
+    background-color: wheat;
+    width: 12em;
+    border: 1px solid;
+}
+
+h2 {
+    color: black;
+}
+
+.team-list {
+    list-style: none;
+} 
+
+.team-list li {
+    display: inline-block;
+    background-color:cornflowerblue;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+}
+
+.team-list li span {
+    background-color: teal;
+    padding: 2px;
+}

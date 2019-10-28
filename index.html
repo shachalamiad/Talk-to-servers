@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Call servers</title>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body onload="onInit()">
+    <h1>Meet AJAX</h1>
+    <h1>Address-book</h1>
+    <button onclick="ask()">Ask</button>
+    <section class="res-container hidden">
+        <ul class="address-book"></ul>
+        <div id="results"></div>
+    </section>
+
+    <section class="res-container-2 hidden">
+        <h1>Yes-No Q</h1>
+        <input type="text" placeholder="Please enter a question" oninput="onUserAsk(this.value)" />
+        <h2 class="yes-no"></h2>
+        <h3 class="joke-dog"></h3>
+        <img src="" />
+    </section>
+
+    <section class="res-container-3 hidden">
+        <h1>World cup</h1>
+        <input type="text" 
+            placeholder="Start typing your team name" 
+            oninput="onTeamSearch(this.value)" />
+        <ul class="team-list">
+        <h2 class="team-data"></h2>
+        </ul>
+        <div class="country-games"></div>
+    </section>
+
+
+    <script src="lib/jquery.js"></script>
+    <script src="js/service.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
